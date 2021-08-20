@@ -40,7 +40,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 .btn-cursos {
   border: none;
   background: #4b8;

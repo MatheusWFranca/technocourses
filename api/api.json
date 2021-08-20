@@ -27,9 +27,9 @@
     "titulo": "Contato",
     "descricao": "Entre em contato que responderemos em até 24h.",
     "contato": {
-      "telefone": "21 9999-9999",
-      "email": "contato@gmail.com",
-      "endereco": "Rua Ali Perto, Botafogo - RJ"
+      "Telefone": "11 9999-9999",
+      "Email": "contato@gmail.com",
+      "Endereco": "Rua Bem-te-vi, São Paulo - SP"
     }
   },
   "cursos": {

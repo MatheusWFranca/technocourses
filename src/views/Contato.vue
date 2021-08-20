@@ -5,8 +5,16 @@
     </div>
     <transition>
       <div v-if="api">
-        <h1>Contato</h1>
-        <p>{{ api }}</p>
+        <h1>{{ api.titulo }}</h1>
+        <p>{{ api.descricao }}</p>
+        <ul>
+          <li v-for="(contatos, index) in api.contato" :key="index">
+            <p class="dados">{{ index }}: {{ contatos }}</p>
+          </li>
+        </ul>
+        <router-link tag="button" class="btn-cursos" to="/"
+          >Whatsapp</router-link
+        >
       </div>
     </transition>
   </div>
@@ -23,3 +31,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.dados {
+  color: #1c1c1c;
+}
+</style>
