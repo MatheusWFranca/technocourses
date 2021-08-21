@@ -8,8 +8,15 @@
         <h1>{{ api.titulo }}</h1>
         <p>{{ api.descricao }}</p>
         <ul>
-          <li v-for="(lista, index) in api.cursos" :key="index">
-            <h2>{{ lista[0] }}</h2>
+          <li v-for="curso in api.cursos" :key="curso.id">
+            <router-link
+              :to="{ name: 'curso', params: { curso: curso.id } }"
+              tag="h2"
+            >
+              {{ curso.nome }} - {{ curso.totalAulas }} aulas |
+              {{ curso.horas }} horas
+            </router-link>
+            <p>{{ curso.descricao }}</p>
           </li>
         </ul>
       </div>
