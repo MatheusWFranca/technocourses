@@ -4,17 +4,22 @@
       <PageLoading />
     </div>
     <transition>
-      <div v-if="api">
-        <h1>{{ api.titulo }}</h1>
-        <p>{{ api.descricao }}</p>
-        <ul>
-          <li v-for="(contatos, index) in api.contato" :key="index">
-            <p class="dados">{{ index }}: {{ contatos }}</p>
-          </li>
-        </ul>
-        <router-link tag="button" class="btn-cursos" to="/"
-          >Whatsapp</router-link
-        >
+      <div class="conteudo">
+        <div v-if="api">
+          <h1>{{ api.titulo }}</h1>
+          <p>{{ api.descricao }}</p>
+          <ul>
+            <li v-for="(contatos, index) in api.contato" :key="index">
+              <p class="dados">{{ index }}: {{ contatos }}</p>
+            </li>
+          </ul>
+          <router-link tag="button" class="btn-cursos" to="/"
+            >Whatsapp</router-link
+          >
+        </div>
+        <div v-if="api">
+          <img src="@/assets/lamp.png" alt="Contato" />
+        </div>
       </div>
     </transition>
   </div>

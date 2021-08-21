@@ -7,7 +7,7 @@
       <div v-if="api">
         <h1>{{ api.titulo }}</h1>
         <p>{{ api.descricao }}</p>
-        <ul>
+        <ul class="cursos-lista">
           <li v-for="curso in api.cursos" :key="curso.id">
             <router-link
               :to="{ name: 'curso', params: { curso: curso.id } }"
@@ -35,3 +35,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.cursos-lista li {
+  margin-bottom: 50px;
+}
+</style>

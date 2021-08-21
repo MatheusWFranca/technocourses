@@ -17,7 +17,7 @@ export default {
           setTimeout(() => {
             this.api = json;
             this.loading = false;
-          }, 1200)
+          }, 500)
         });
     },
   },
